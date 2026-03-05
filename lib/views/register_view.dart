@@ -166,11 +166,16 @@ class _RegisterViewState extends State<RegisterView>
                                 ? _buildOtpSection(authVM, isSmallScreen)
                                 : _buildRegistrationForm(authVM, isSmallScreen),
                           ),
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 200),
-                            height: MediaQuery.of(context).viewInsets.bottom > 0
-                                ? 20
-                                : 0,
+                         // Remove this entire block:
+AnimatedContainer(
+  duration: const Duration(milliseconds: 200),
+  height: MediaQuery.of(context).viewInsets.bottom > 0
+      ? 20
+      : 0,
+),
+
+// Replace with:
+const SizedBox(height: 20),
                           ),
                         ],
                       ),
