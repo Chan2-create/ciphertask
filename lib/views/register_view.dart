@@ -376,9 +376,7 @@ class _RegisterViewState extends State<RegisterView>
                 }
                 return null;
               },
-              onChanged: (_) {
-                _formKey.currentState?.validate();
-              },
+              onChanged: (_) => setState(() {}),
               isSmallScreen: isSmallScreen,
             ),
             SizedBox(height: isSmallScreen ? 16 : 20),
